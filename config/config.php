@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'app' => [
-        'name' => env_value('APP_NAME', 'KomikHub'),
+        'name' => env_value('APP_NAME', 'Kurotsuki'),
         'url' => env_value('APP_URL', 'http://localhost/Komik_Website/public'),
         'session_name' => env_value('SESSION_NAME', 'komikhub_session'),
     ],

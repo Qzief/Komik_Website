@@ -5,7 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= e($title ?? config('app.name')) ?></title>
+    <?php $pageTitle = trim((string) ($title ?? '')); ?>
+    <title><?= e($pageTitle !== '' && $pageTitle !== config('app.name') ? $pageTitle . ' | ' . config('app.name') : config('app.name')) ?></title>
+    <link rel="icon" type="image/png" href="<?= e(site_icon_url()) ?>">
+    <link rel="shortcut icon" type="image/png" href="<?= e(site_icon_url()) ?>">
+    <link rel="apple-touch-icon" href="<?= e(site_icon_url()) ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -28,7 +32,9 @@
     <header class="topbar">
         <div class="topbar__wrap">
             <a href="<?= e(route_url('home')) ?>" class="brand">
-                <span class="brand__mark">KH</span>
+                <span class="brand__mark" aria-hidden="true">
+                    <img src="<?= e(site_icon_url()) ?>" alt="">
+                </span>
                 <span class="brand__text">
                     <strong><?= e(config('app.name')) ?></strong>
                     <small>Reader library</small>

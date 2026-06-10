@@ -20,6 +20,11 @@ function asset_url(string $path): string
     return base_url($path);
 }
 
+function site_icon_url(): string
+{
+    return asset_url('icon.png');
+}
+
 function config(string $key, mixed $default = null): mixed
 {
     static $config;
