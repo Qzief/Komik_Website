@@ -1,0 +1,173 @@
+:root {
+    --comic-book-shadow: 0 18px 30px rgba(0, 0, 0, 0.28);
+    --comic-book-shadow-hover: 0 24px 38px rgba(0, 0, 0, 0.34);
+    --comic-book-ring: rgba(255, 255, 255, 0.08);
+    --comic-book-spine: rgba(7, 7, 10, 0.72);
+    --comic-book-gloss: rgba(255, 255, 255, 0.12);
+    --comic-book-badge: rgba(187, 134, 252, 0.16);
+}
+
+.comic-book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 28px 24px;
+    align-items: start;
+}
+
+.comic-book-card {
+    min-width: 0;
+    perspective: 1200px;
+}
+
+.comic-book-cover {
+    position: relative;
+    overflow: visible;
+    display: block;
+    isolation: isolate;
+    transform-style: preserve-3d;
+    transition: transform 220ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.comic-book-cover::before,
+.comic-book-cover::after {
+    position: absolute;
+    pointer-events: none;
+    content: "";
+}
+
+.comic-book-cover::before {
+    inset: 8px auto 8px -7px;
+    width: 12px;
+    border-radius: 10px 4px 4px 10px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02)),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03), var(--comic-book-spine));
+    box-shadow:
+        inset 1px 0 0 rgba(255, 255, 255, 0.07),
+        inset -1px 0 0 rgba(0, 0, 0, 0.32);
+    z-index: 0;
+    transform: translateZ(-16px);
+}
+
+.comic-book-cover::after {
+    inset: 0;
+    border-radius: 14px;
+    background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.08), transparent 18%, transparent 64%, rgba(255, 255, 255, 0.04) 100%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 34%, rgba(6, 6, 8, 0.1) 100%);
+    z-index: 2;
+}
+
+.comic-book-cover img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 14px;
+    outline: 1px solid rgba(255, 255, 255, 0.1);
+    outline-offset: -1px;
+    box-shadow: var(--comic-book-shadow);
+    background: rgba(255, 255, 255, 0.04);
+    transition:
+        transform 220ms cubic-bezier(0.2, 0, 0, 1),
+        box-shadow 220ms cubic-bezier(0.2, 0, 0, 1),
+        filter 220ms cubic-bezier(0.2, 0, 0, 1);
+    transform-origin: center center;
+}
+
+.comic-book-card:hover .comic-book-cover {
+    transform: translateY(-6px) rotateY(-3deg);
+}
+
+.comic-book-card:hover .comic-book-cover img {
+    box-shadow: var(--comic-book-shadow-hover);
+    filter: saturate(1.03);
+}
+
+.comic-book-info {
+    display: grid;
+    gap: 8px;
+    margin-top: 12px;
+    grid-template-rows: minmax(2.5rem, auto) auto;
+}
+
+.comic-book-title {
+    margin: 0;
+    min-height: 2.5rem;
+    font-size: 0.94rem;
+    font-weight: 700;
+    line-height: 1.32;
+    letter-spacing: -0.01em;
+}
+
+.comic-book-title a {
+    display: -webkit-box;
+    overflow: hidden;
+    color: var(--ink);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-wrap: balance;
+    transition: color 180ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.comic-book-card:hover .comic-book-title a {
+    color: #d7b8ff;
+}
+
+.comic-book-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 24px;
+    color: var(--muted);
+    font-size: 0.73rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+.comic-book-status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    max-width: 100%;
+    padding: 0 9px;
+    border-radius: 999px;
+    background: var(--comic-book-badge);
+    color: #e1cbff;
+    white-space: nowrap;
+    box-shadow: inset 0 0 0 1px rgba(187, 134, 252, 0.12);
+}
+
+.comic-book-chapter {
+    overflow: hidden;
+    color: var(--muted-strong);
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.comic-book-note {
+    grid-column: 1 / -1;
+    color: var(--muted);
+    font-size: 0.72rem;
+    line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+    .comic-book-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 14px;
+    }
+
+    .comic-book-title {
+        min-height: 2.38rem;
+        font-size: 0.9rem;
+    }
+
+    .comic-book-meta {
+        gap: 8px;
+        font-size: 0.69rem;
+    }
+}

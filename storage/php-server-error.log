@@ -1,0 +1,25 @@
+[Wed Jun  3 07:12:01 2026] PHP 8.2.12 Development Server (http://127.0.0.1:8090) started
+[Wed Jun  3 07:12:03 2026] 127.0.0.1:58929 Accepted
+[Wed Jun  3 07:12:03 2026] 127.0.0.1:58929 [200]: GET /
+[Wed Jun  3 07:12:03 2026] 127.0.0.1:58929 Closing
+[Wed Jun  3 07:12:18 2026] 127.0.0.1:58935 Accepted
+[Wed Jun  3 07:12:19 2026] 127.0.0.1:58935 [200]: GET /
+[Wed Jun  3 07:12:19 2026] 127.0.0.1:58935 Closing
+[Wed Jun  3 07:12:25 2026] 127.0.0.1:58940 Accepted
+[Wed Jun  3 07:12:25 2026] 127.0.0.1:58940 [200]: GET /
+[Wed Jun  3 07:12:25 2026] 127.0.0.1:58940 Closing
+[Wed Jun  3 07:19:09 2026] 127.0.0.1:62246 Accepted
+[Wed Jun  3 07:19:09 2026] 127.0.0.1:62246 [200]: GET /
+[Wed Jun  3 07:19:09 2026] 127.0.0.1:62246 Closing
+[Wed Jun  3 07:19:09 2026] 127.0.0.1:62247 Accepted
+[Wed Jun  3 07:19:09 2026] 127.0.0.1:62247 [200]: GET /assets/style.css
+[Wed Jun  3 07:19:09 2026] 127.0.0.1:62247 Closing
+[Wed Jun  3 07:20:01 2026] 127.0.0.1:57084 Accepted
+[Wed Jun  3 07:20:01 2026] 127.0.0.1:57084 [200]: GET /
+[Wed Jun  3 07:20:01 2026] 127.0.0.1:57084 Closing
+[Wed Jun  3 07:21:02 2026] 127.0.0.1:54240 Accepted
+[Wed Jun  3 07:21:02 2026] 127.0.0.1:54241 Accepted
+[Wed Jun  3 07:21:03 2026] 127.0.0.1:54240 [200]: GET /index.php?route=comic.show&slug=solo-farming-in-the-tower
+[Wed Jun  3 07:21:03 2026] 127.0.0.1:54240 Closing
+[Wed Jun  3 07:21:03 2026] 127.0.0.1:54241 [200]: GET /index.php?route=login
+[Wed Jun  3 07:21:03 2026] 127.0.0.1:54241 Closing

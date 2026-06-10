@@ -1,0 +1,29 @@
+{
+  "mode": "edit",
+  "componentId": "412698752965550080",
+  "projectId": "412696915583590400",
+  "selectedRevisionId": "412698752965550081",
+  "jobId": "412694038316212224-external-agent-412699238737256448",
+  "generatedName": "zestily-rock-4063",
+  "name": "KomikHub Modern Catalog",
+  "dimensions": {
+    "width": 1440,
+    "height": 1180
+  },
+  "selectedImages": [],
+  "editableFiles": [
+    {
+      "path": "src/App.tsx",
+      "sha256": "a6500d049f4b13b9fe1f2543e3db419e4b48c1cd4ff993a75321c3fd440a2e11"
+    },
+    {
+      "path": "src/components/generated/KomikHubModernCatalog.tsx",
+      "sha256": "bb58a4d95b6090987868500edd8beb15faa02d6fbc03b89aa91399ce4f58bb19"
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "fb25e0d83580e49325f360754564e83654aaf8ca4505b26624f56c98e9197cfd"
+    }
+  ],
+  "baseRevisionId": "412698752965550081"
+}

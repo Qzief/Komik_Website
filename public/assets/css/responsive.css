@@ -1,0 +1,17 @@
+@media (max-width: 760px) {
+    body {
+        padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 104px);
+    }
+
+    .page {
+        padding-bottom: 12px;
+    }
+
+    .mobile-bottom-nav__item {
+        background: transparent !important;
+    }
+
+    .route-reader .mobile-bottom-nav {
+        display: none;
+    }
+}
