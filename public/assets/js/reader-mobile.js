@@ -102,9 +102,7 @@
         });
 
         readerImages.addEventListener("click", () => {
-            if (window.innerWidth <= 760) {
-                toggleControls();
-            }
+            toggleControls();
         });
 
         document.addEventListener("keydown", (event) => {
@@ -115,10 +113,8 @@
         });
 
         window.addEventListener("resize", () => {
-            if (window.innerWidth > 760) {
-                closePicker();
-                expandControls();
-            }
+            closePicker();
+            expandControls();
         });
     };
 
